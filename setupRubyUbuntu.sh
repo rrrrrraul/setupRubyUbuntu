@@ -30,5 +30,6 @@ gem install bundler
 
 
 # setup postgresql
-
-# sudo -u postgres createuser devdbuser -s
+# postgresql-11 , this specific version requires a repository
+sudo apt install postgresql postgresql-contrib libpq-dev
+sudo -u postgres createuser devdb -s
