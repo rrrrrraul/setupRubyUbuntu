@@ -1,5 +1,20 @@
 #!/bin/sh
 
+# -------- install the following RoR stack ---------------
+#   * Ubuntu 18.04
+#   * ruby 2.5.1
+#   * rails 4.2.10
+#   * pump 2.2
+#   * Postgres 10
+#   * nginx 1.14
+#   * node.js 8.10.0
+#   * certbot 0.23.0
+#
+# this should match DO RoR pre-configured droplet
+# --------------------------------------------------------
+
+
+
 # set up repo locations
 cd
 
@@ -15,14 +30,14 @@ sudo apt install git-core zlib1g-dev build-essential libssl-dev libreadline-dev 
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-exec $SHELL
+#exec $SHELL
 
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-exec $SHELL
+#exec $SHELL
 
-rbenv install 2.6.5
-rbenv global 2.6.5
+rbenv install 2.5.1
+rbenv global  2.5.1
 ruby -v
 
 # now install bundler
