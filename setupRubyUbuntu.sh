@@ -34,11 +34,13 @@ source ~/.bashrc
 
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-source ~/.bashrc
+#source ~/.bashrc
+exec bash
 
 rbenv install 2.5.1
 rbenv global  2.5.1
-source ~/.bashrc
+#source ~/.bashrc
+exec bash
 
 ruby -v
 
