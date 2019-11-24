@@ -47,6 +47,8 @@ ruby -v
 # now install bundler
 gem install bundler
 
+# now install rails
+gem install rails:4.2.10 --no-ri --no-rdoc
 
 # setup postgresql
 # postgresql-11 , this specific version requires a repository
