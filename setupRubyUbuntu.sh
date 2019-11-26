@@ -34,13 +34,13 @@ source ~/.bashrc
 
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-#source ~/.bashrc
-exec bash
+source ~/.bashrc
+#exec bash
 
 rbenv install 2.5.1
 rbenv global  2.5.1
-#source ~/.bashrc
-exec bash
+source ~/.bashrc
+#exec bash
 
 ruby -v
 
@@ -51,6 +51,6 @@ gem install bundler
 gem install rails:4.2.10 --no-ri --no-rdoc
 
 # setup postgresql
-# postgresql-11 , this specific version requires a repository
+# >> sudo -u postgres psql , will bring up psql command line
 sudo apt install postgresql postgresql-contrib libpq-dev
 sudo -u postgres createuser devdb -s
